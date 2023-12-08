@@ -1,0 +1,113 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #003366;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  margin-right: 2.5rem;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn {
+  background-color: #61dafb;
+  color: #003366;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Styles for mobile view */
+@media (max-width: 768px) {
+  .right-section{
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    text-align: left;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    background-color: #555;
+  }
+
+  .navbar.open .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-icon:hover .bar {
+    background-color: #61dafb;
+  }
+}

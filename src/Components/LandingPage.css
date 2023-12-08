@@ -1,0 +1,113 @@
+/* LandingPage.css */
+
+.landing-page {
+  background-color: rgb(255, 253, 253); /* Light gray background */
+  color: #333; /* Dark gray text color */
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap; /* Ensure content wraps to the next line on smaller screens */
+  max-width: 1200px;
+  width: 100%;
+}
+
+.description {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description h1 {
+  font-size: 3rem; /* Increase the heading font size */
+  margin-bottom: 1.5rem; /* Increase margin-bottom for more spacing */
+  color: #003366; /* Dark blue heading color */
+}
+
+.description p {
+  font-size: 1.4rem; /* Increase paragraph font size */
+  color: #666; /* Medium gray text color */
+  line-height: 1.5; /* Adjust line height for better readability */
+  margin-bottom: 2rem; /* Increase margin-bottom for more spacing */
+}
+
+.get-started-btn button {
+  background-color: #61dafb; /* Adjust the button color as needed */
+  color: #003366; /* Adjust the button text color as needed */
+  padding: 1rem 2rem; /* Increase padding for a larger button */
+  font-size: 1.4rem; /* Increase font size for the button text */
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  max-width: 100%; /* Ensure the image does not exceed its container */
+  height: auto;
+}
+
+.moon-icon {
+  margin-right: 10px; /* Adjust spacing as needed */
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.moon-icon-dark {
+  stroke: white; /* Adjust the moon icon color for dark mode */
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  .image {
+    display: none; /* Hide the image on screens smaller than 768px */
+  }
+
+  .description {
+    flex: 1; /* Allow the description to take full width on mobile */
+    padding: 1rem; /* Adjust padding for better mobile layout */
+  }
+
+  .description h1{
+    font-size: 2rem; /* Reduce the heading font size for mobile view */ 
+    justify-content: center;                        
+  }
+
+  .description p{
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;                      
+  }
+
+  .get-started-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1px; /* Adjust the margin as needed for spacing */
+  }
+  
+  .get-started-btn button {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    background-color: #61dafb;
+    color: #003366;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
